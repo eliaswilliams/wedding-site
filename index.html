@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>our wedding</title>
+    <link href="https://fonts.google.com/specimen/Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section class="hero"></section>
+    <div class="container">
+
+        <div class="card">
+            <header style="position: relative; overflow: visible;">
+                <div class="menu-logo">
+                    <img src="assets/menu-logo.jpg" alt="M and E floral logo" style="width:80px;display:block;margin:0 auto 18px auto;" />
+                </div>
+
+                <div style="position: relative; z-index: 1;">
+                    <h1>mica and eli's wedding</h1>
+                    <p>october 11th, 2025</p>
+                </div>
+            </header>
+
+            <!-- Side Menu Navigation -->
+            <nav class="side-menu">
+                <ul>
+                    <li><a href="#details">details</a></li>
+                    <li><a href="#timeline">timeline</a></li>
+                    <li><a href="#gifts">gifts</a></li>
+                    <li><a href="#local-recommendations">recommendations</a></li>
+                </ul>
+            </nav>
+
+            <section id="details">
+                <h2>details</h2>
+                <p>we’re so excited to celebrate with you! weather permitting, the ceremony will be held outdoors, so please dress accordingly.</p>
+                <p>location: <a href="https://maps.app.goo.gl/5x6jfiZnFdEeFind9">the kemble inn</a> (2 kemble st, lenox, ma 01240)</p>
+                <p>dress code: cocktail attire, bride will now be in white!</p>
+                <p>parking: we have limited space in front of the inn. however, there is ample free parking available around town.</p>
+            </section>
+
+            <section id="timeline">
+                <h2>timeline</h2>
+                <div style="display: flex; justify-content: center;">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: right; padding-right: 1em; white-space: nowrap;">3:00 pm</td>
+                                <td style="text-align: center; width: 2em; font-weight: bold;">–</td>
+                                <td style="text-align: left; padding-left: 1em;">arrival</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right; padding-right: 1em; white-space: nowrap;">4:30 pm</td>
+                                <td style="text-align: center; font-weight: bold;">–</td>
+                                <td style="text-align: left; padding-left: 1em;">cocktail hour</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right; padding-right: 1em; white-space: nowrap;">6:00 pm</td>
+                                <td style="text-align: center; font-weight: bold;">–</td>
+                                <td style="text-align: left; padding-left: 1em;">dinner</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right; padding-right: 1em; white-space: nowrap;">7:30 pm</td>
+                                <td style="text-align: center; font-weight: bold;">–</td>
+                                <td style="text-align: left; padding-left: 1em;">toasts & speeches</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right; padding-right: 1em; white-space: nowrap;">8:00 pm</td>
+                                <td style="text-align: center; font-weight: bold;">–</td>
+                                <td style="text-align: left; padding-left: 1em;">dessert</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right; padding-right: 1em; white-space: nowrap;">9:00 pm</td>
+                                <td style="text-align: center; font-weight: bold;">–</td>
+                                <td style="text-align: left; padding-left: 1em;">party time!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="gifts">
+            <h2>gifts</h2>
+            <p>since we’ll be traveling back to canada after the wedding, we kindly ask that no physical gifts be given, as they may cause issues at the border.</p>
+
+            <p>your presence means the world to us — that’s truly the best gift.</p>
+
+            <p>if you’d like to contribute, we’ve set up a <a href="https://www.paypal.com/pool/9gtWk04quA">honeymoon fund</a>. this is completely optional and not expected.</p>
+            </section>
+
+
+            <section id="local-recommendations">
+                <h2>local recommendations</h2>
+                <p>for those of you traveling from out of town, we’ve put together a list of our favorite local spots. </p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1olSe_D45aA7llcyxCB4zuMeBj41oK2A&ehbc=2E312F"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+
+            <footer>
+                <p>with love, mica & eli</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scroll Down Arrow -->
+    <div class="scroll-arrow" id="scrollArrow">
+        <svg viewBox="0 0 24 24">
+            <line x1="12" y1="6" x2="12" y2="18" />
+            <polyline points="6 12 12 18 18 12" />
+        </svg>
+    </div>
+
+    <script>
+        function checkScrollArrow() {
+            const arrow = document.querySelector('.scroll-arrow');
+            if (!arrow) return;
+            const scrollY = window.scrollY || window.pageYOffset;
+            const windowH = window.innerHeight;
+            const docH = document.documentElement.scrollHeight;
+            // Fade out gradually in last 300px
+            const fadeStart = docH - windowH - 300;
+            if (scrollY + windowH >= docH - 8) {
+                arrow.style.opacity = '0';
+                arrow.style.pointerEvents = 'none';
+            } else if (scrollY > fadeStart) {
+                const fade = 1 - ((scrollY - fadeStart) / 300);
+                arrow.style.opacity = fade;
+                arrow.style.pointerEvents = 'auto';
+            } else {
+                arrow.style.opacity = '1';
+                arrow.style.pointerEvents = 'auto';
+            }
+        }
+
+        document.getElementById('scrollArrow').addEventListener('click', function() {
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
+
+        function setActiveMenu() {
+            const sections = ['details', 'timeline', 'gifts', 'local-recommendations'];
+            const links = document.querySelectorAll('.side-menu a');
+            let activeSet = false;
+            for (let i = 0; i < sections.length; i++) {
+                const section = document.getElementById(sections[i]);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 80 && rect.bottom > 80 && !activeSet) {
+                        links.forEach(link => link.classList.remove('active'));
+                        links[i].classList.add('active');
+                        activeSet = true;
+                    }
+                }
+            }
+            if (!activeSet) {
+                links.forEach(link => link.classList.remove('active'));
+            }
+        }
+        window.addEventListener('scroll', checkScrollArrow);
+        window.addEventListener('resize', checkScrollArrow);
+        document.addEventListener('DOMContentLoaded', checkScrollArrow);
+        window.addEventListener('load', checkScrollArrow);
+
+        window.addEventListener('scroll', setActiveMenu);
+        window.addEventListener('resize', setActiveMenu);
+        document.addEventListener('DOMContentLoaded', setActiveMenu);
+        window.addEventListener('load', setActiveMenu);
+    </script>
+
+</body>
+
+</html>

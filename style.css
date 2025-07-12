@@ -1,0 +1,337 @@
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./assets/fonts/AtkinsonHyperlegibleNext-ExtraLightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+
+
+/* Update background and off-whites */
+body {
+  font-family: 'Atkinson Hyperlegible Mono', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url('assets/the-kemble-berkshires.jpg');
+  background-size: cover;
+  background-position: center 90%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #f8f6f2;
+  color: #6e7c6a; /* soft sage green-gray for body text */
+}
+
+/* Remove card from header, make header transparent and simple */
+header {
+  background: transparent;
+  padding: 20px 0 10px 0;
+  text-align: center;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Hero section remains unchanged */
+.hero {
+  background-image: url('assets/the-kemble-berkshires.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove card style from sections inside the card */
+.card > section {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0px 32px;
+  padding: 16px 16px;
+  position: relative;
+  z-index: 3;
+}
+
+
+
+/* Remove section card style for standalone sections */
+section {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Remove border from h2, soften headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #6d8a6e; /* muted sage green for headings */
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+}
+
+h2 {
+  border: none;
+  padding-bottom: 0;
+  background: none;
+  font-weight: 600;
+  color: #6d8a6e; /* ensure h2 uses the sage heading color */
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+}
+
+/* Links with soft green color */
+a {
+  color: #7bbf8a; /* soft green for links */
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+a:hover, a:focus {
+  color: #5e9c6c; /* deeper green on hover */
+}
+
+/* Make header more readable on transparent background */
+header,
+.card > header {
+  padding: 32px 0 10px 0;
+  text-align: center;
+  border-radius: 22px 22px 0 0;
+}
+
+/* Footer with soft background for readability */
+.card > footer {
+  text-align: center;
+  padding: 14px 0 10px 0;
+  border-radius: 0 0 28px 28px;
+  color: #6d8a6e; /* match heading sage green */
+  margin: 32px 0 0 0;
+}
+
+/* Button with softer green */
+.button {
+  display: inline-block;
+  background: #7bbf8a;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 7px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(123,191,138,0.08);
+  transition: background 0.2s;
+}
+
+.button:hover, .button:focus {
+  background: #6ea97a; /* softer green on hover */
+}
+
+/* Center the container and add margin */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    margin: 200px auto;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 28px;
+    padding: 16px; /* Add padding for even spacing inside */
+}
+
+/* Center the card, add margin and subtle background */
+.card {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 32px rgba(123,191,138,0.20);
+    border-radius: 20px;
+    margin: 0; /* Remove margin so card sits evenly in container */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 70%; /* Increase this value for taller aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    }
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    }
+
+/* Scroll down arrow styles */
+.scroll-arrow {
+    position: fixed;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 56px;
+    height: 56px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s, opacity 0.3s;
+    opacity: 1;
+}
+.scroll-arrow:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    background: #fff;
+}
+.scroll-arrow span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 0;
+    border-right: 0;
+}
+.scroll-arrow svg {
+    width: 28px;
+    height: 28px;
+    stroke: #333;
+    stroke-width: 2.5;
+    fill: none;
+}
+
+/* Fixed side menu navigation */
+.side-menu {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.92);
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 12px 18px;
+    z-index: 200;
+    min-width: 140px;
+    margin: 0;
+}
+.side-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.side-menu li {
+    margin-bottom: 12px;
+}
+.side-menu li:last-child {
+    margin-bottom: 0;
+}
+.side-menu a {
+    color: #444 !important; /* match body text grey */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: italic;
+    transition: color 0.2s;
+}
+.side-menu a:hover {
+    color: #3a7f5a !important; /* sample green as heading text */
+}
+.side-menu a.active {
+    color: #111 !important; /* darker grey or black */
+}
+html {
+    scroll-behavior: smooth;
+}
