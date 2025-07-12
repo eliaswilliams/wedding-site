@@ -335,3 +335,9 @@ header,
 html {
     scroll-behavior: smooth;
 }
+
+@media (max-width: 700px) {
+    .side-menu, .menu-logo {
+        display: none !important;
+    }
+}
